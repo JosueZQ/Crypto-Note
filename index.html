@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es-mx">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CryptoNote</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="encabezado">
+
+        <a href="https://www.oracle.com/mx/education/oracle-next-education/">
+            <img class="encabezado_imagen" src="imagenes/Logo.png" alt="Logo de Alura">
+        </a>
+
+        <div class="encabezado_botones">
+            <button class="encabezado_botones_claro" onclick="temaClaro()">Modo Claro</button>
+            <button class="encabezado_botones_obscuro" onclick="temaObscuro()">Modo Obscuro</button>
+        </div>
+
+    </header>
+
+    <main class="contenido">
+
+        <section class="contenido_textoingresado">
+                
+            <h1 class="contenido_textoingresado_titulo">Crypto<strong class="contenido_textoingresado_titulo_destaque">Note</strong></h1>
+            <textarea id="textoIntroducido" class="contenido_textoingresado_textousuario" placeholder="Ingrese el texto aquí"></textarea>
+            <p class="contenido_textoingresado_aviso"><img src="imagenes/signo-exclamacion.png" alt="signo de exclamacion"> Solo letras minúsculas y sin acentos</p>
+        
+            <div class="contenido_textoingresado_botones">
+                <!--botón encriptar -->
+                <button class="contenido_textoingresado_botones_encriptar" type="button" onclick="encriptar()">Encriptar</button>
+                <!--botón desencriptar -->
+                <button class="contenido_textoingresado_botones_desencriptar" type="button" onclick="desencriptar()">Desencriptar</button>
+            </div>
+        </section>
+
+        <section class="contenido_textoresultado">
+            <section class="contenido_textoresultado_contenidoInicial">
+                <img class="contenido_textoresultado_contenidoInicial_imagen" src="imagenes/Muñeco.png" alt="imagen de una persona de cabello largo con una lupa y un diamante intentando encontrar algo">
+                <p class="contenido_textoresultado_contenidoInicial_mensaje1">Ningún mensaje fue encontrado</p>
+                <p class="contenido_textoresultado_contenidoInicial_mensaje2">Ingrese el texto que desees encriptar o desencriptar</p>
+            </section>
+            
+            <textarea id="textoResultado" class="contenido_textoresultado_resultado" readonly placeholder="" ></textarea>
+            <!-- Botón de copiar inicialmente oculto -->
+            <button id="botonCopiar" class="contenido_textoresultado_botonCopiar" onclick="copiarTexto()">Copiar</button>
+
+        </section>
+    </section>
+    </main>
+
+    <footer class="subtexto">
+        <p>Desarrollado por 
+            <a href="https://josuezq.github.io/Mi-Portafolio/" class="subtexto_portafolio">
+                Josué Zagaceta
+            </a> 
+            en el programa ONE de Alura Latam
+        </p>
+
+    </footer>
+    
+</body>
+
+<script src="script.js"></script>
+
+</html>
