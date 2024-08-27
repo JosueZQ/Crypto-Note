@@ -1,7 +1,7 @@
 function encriptar() {
     let textoIntroducido = document.getElementById("textoIntroducido").value;
 
-    if (!validarTexto(texto)) {
+    if (!validarTexto(textoIntroducido)) {
         alert("El texto contiene mayúsculas o caracteres especiales. Solo se permiten letras minúsculas y espacios.");
         return ""; 
     }
@@ -32,7 +32,7 @@ function encriptar() {
 function desencriptar(){
     let textoIntroducido = document.getElementById("textoIntroducido").value;
 
-    if (!validarTexto(texto)) {
+    if (!validarTexto(textoIntroducido)) {
         alert("El texto contiene mayúsculas o caracteres especiales. Solo se permiten letras minúsculas y espacios.");
         return ""; 
     }
