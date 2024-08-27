@@ -1,6 +1,11 @@
 function encriptar() {
     let textoIntroducido = document.getElementById("textoIntroducido").value;
 
+    if (!validarTexto(texto)) {
+        alert("El texto contiene mayúsculas o caracteres especiales. Solo se permiten letras minúsculas y espacios.");
+        return ""; 
+    }
+    
     if (textoIntroducido === "") {
         alert("Por favor, introduce un texto.");
         return;
@@ -27,6 +32,11 @@ function encriptar() {
 function desencriptar(){
     let textoIntroducido = document.getElementById("textoIntroducido").value;
 
+    if (!validarTexto(texto)) {
+        alert("El texto contiene mayúsculas o caracteres especiales. Solo se permiten letras minúsculas y espacios.");
+        return ""; 
+    }
+    
     if (textoIntroducido === "") {
         alert("Por favor, introduce un texto.");
         return;
@@ -48,6 +58,11 @@ function desencriptar(){
         mostrarOcultarContenidoInicial();
 
         ajustarAlturaContenedor();
+}
+
+function validarTexto(texto) {
+    let regex = /^[a-z\s]+$/;
+    return regex.test(texto);
 }
 
 function copiarTexto() {
